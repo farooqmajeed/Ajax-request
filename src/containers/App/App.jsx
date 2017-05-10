@@ -1,26 +1,11 @@
-import React, { Component,PropTypes } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 //import * as MUI from 'material-ui'
 import AppTheme from '../../app-theme';
 import Navigation from '../Navigation/Navigation'
-import { connect } from 'react-redux';
-import AudioActions from '../../store/actions/audioActions.js'
 
-function mapStateToProps(state) {
-  
-    return {
-         audioList: state.epicReducer
-    };
-}
 
-function mapDispatchToProps(dispatch) {
-    return {
-         fetchAudioData: function(){
-            return dispatch(AudioActions.getAudioListSuccessfull)
-        }
-    };
-}
 
 
 class App extends Component {
@@ -68,4 +53,4 @@ class App extends Component {
 }
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(App)
+export default App;

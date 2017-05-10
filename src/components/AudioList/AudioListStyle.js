@@ -4,17 +4,18 @@ const styles = {
       minWidth: 320,
       maxWidth: 600,
       margin : 'auto',
+      marginTop:20,
       height: 'auto',
-      top: '10%',
+      top: 10,
       left: 0,
       right: 0,
-      padding: 10,      
+      padding: 20,      
   }, 
   buttonConainer: {
       margin: 'auto',
       marginTop: 'auto',
-      minWidth: 320,
-      maxWidth: 600,
+      minWidth: 100,
+      maxWidth: 120,
       height: 'auto',
       border: 'false'
        
