@@ -85,7 +85,7 @@ class AudioList extends Component {
                 </MUI.Card>
                 <br />
 
-                <div className="long-buttonsDiv" style={styles.buttonConainer}>
+                <div style={styles.buttonConainer}>
                     <MUI.RaisedButton  label="Download" onClick={this.props.fetchAudioData}  primary={true} />
                 </div>
             </div>
