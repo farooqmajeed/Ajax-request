@@ -1,11 +1,9 @@
 import React, { Component , PropTypes} from 'react';
 import './Navigation.css';
 import * as MUI from 'material-ui'
-import {Link} from 'react-router';
+// import {Link} from 'react-router';
 import { connect } from 'react-redux';
 import Avatar from 'material-ui/Avatar';
-import Assessment from 'material-ui/svg-icons/action/assessment';
-import Web from 'material-ui/svg-icons/av/web';
 import AudioActions from '../../store/actions/audioActions.js'
 import AudioList from '../../components/AudioList/AudioList'
 function mapStateToProps(state) {
@@ -36,7 +34,7 @@ class Navigation extends Component {
                     size={50}
                     className="navigation-icon"/>
           </div>
-          <MUI.MenuItem
+          {/*<MUI.MenuItem
               className="navigation-menuItem"
               primaryText="Dashboard"
               leftIcon={<Assessment/>}
@@ -53,7 +51,7 @@ class Navigation extends Component {
             primaryText="Audio List"
             leftIcon={<Web/>}
             containerElement={<Link to="/dashboard/audioList"/>}
-          />
+          />*/}
           
       </div>
     );
@@ -64,8 +62,6 @@ class Navigation extends Component {
       <div className="navigation-container">
         <MUI.AppBar style={this.props.styles} title="React Boilerplate"
               onLeftIconButtonTouchTap={this.props.drawerToggle}
-              iconElementRight={<MUI.FlatButton label="Sign out" onTouchTap={this.props.logout}/>}
-              onRightIconButtonTouchTap={()=>this.context.router.push("/login")}
               />
         <MUI.Drawer open={this.props.drawerOpen} docked={false}
             onRequestChange={this.props.drawerToggle}>
